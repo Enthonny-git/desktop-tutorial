@@ -14,7 +14,7 @@ import psycopg2
 DB_CONFIG = {
     "dbname": "TRABALHO_MAFRA",
     "user": "postgres",
-    "password": "1812",
+    "password": "senha",
     "host": "localhost",
     "port": "5432",
 }
