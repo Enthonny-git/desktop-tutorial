@@ -1,3 +1,13 @@
+#alunos:
+josé enthonny oliveira silva / 01988470
+Thiago Henrique Pereira / 01892849
+Kauãn Felipe da Silva Melo / 01892125
+Lucas Silva Conceição / 01887741 
+Daniel Vinicio / 01886913 #
+
+
+
+
 import psycopg2
 
 # Configurações de acesso ao PostgreSQL (ajuste conforme o seu pgAdmin / servidor)
