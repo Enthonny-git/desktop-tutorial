@@ -10,7 +10,7 @@ Daniel Vinicio / 01886913 #
 
 import psycopg2
 
-# Configurações de acesso ao PostgreSQL (ajuste conforme o seu pgAdmin / servidor)
+# Configurações de acesso ao PostgreSQL #
 DB_CONFIG = {
     "dbname": "TRABALHO_MAFRA",
     "user": "postgres",
