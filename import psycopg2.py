@@ -1,6 +1,6 @@
 import psycopg2
 
-# Configurações de acesso ao PostgreSQL (ajuste conforme o seu pgAdmin / servidor)
+
 DB_CONFIG = {
     "dbname": "TRABALHO_MAFRA",
     "user": "postgres",
@@ -60,7 +60,6 @@ def cadastrar_aluno():
 
   conexao = conectar_banco()
   cursor = conexao.cursor()
-  # Consulta parametrizada com %s para segurança contra SQL Injection
   cursor.execute(
       "INSERT INTO alunos (nome, idade, nota) VALUES (%s, %s, %s)",
       (nome, idade, nota),
@@ -100,7 +99,6 @@ def buscar_aluno_por_nome():
 
   conexao = conectar_banco()
   cursor = conexao.cursor()
-  # ILIKE busca ignorando diferenças entre maiúsculas e minúsculas no Postgres
   cursor.execute(
       "SELECT id, nome, idade, nota FROM alunos WHERE nome ILIKE %s",
       (f"%{termo}%",),
@@ -214,7 +212,6 @@ def mostrar_media_geral():
   print("\n--- MÉDIA GERAL DAS NOTAS ---")
   conexao = conectar_banco()
   cursor = conexao.cursor()
-  # Utilizando a função de agregação AVG() do SQL
   cursor.execute("SELECT AVG(nota) FROM alunos")
   resultado = cursor.fetchone()
   cursor.close()
